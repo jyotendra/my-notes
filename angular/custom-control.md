@@ -1,0 +1,1 @@
+# This guide explains how to create a new custom component.
