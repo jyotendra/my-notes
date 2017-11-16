@@ -1,0 +1,50 @@
+<main class="maincontent report-page">
+    <section class="page_header">
+        <div class="page_header_overlay">
+            <h2>REPORTS</h2>
+        </div>
+    </section>
+    <section class="page_content">
+        <div class="container-fluid">
+            <div class="card" id="card_height">
+                <div class="card-header clearfix">
+                    <h3>Download Reports</h3>
+                </div>
+                <div class="card-block">
+                    <form [formGroup]="reportForm" (ngSubmit)="onSubmit()" novalidate>
+                        <div class="form-group">
+                            <label>Select List</label>
+                            <div class="radiobox">
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" formControlName="reportCategory" value="customerList" class="custom-control-input" (change)="renderSubCategories()"/>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Customer List</span>
+                                </label>
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" formControlName="reportCategory" value="driverList" class="custom-control-input" (change)="renderSubCategories()"/>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Driver List</span>
+                                </label>
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" formControlName="reportCategory" value="rideList" class="custom-control-input" (change)="renderSubCategories()"/>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Ride List</span>
+                                </label>
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" formControlName="reportCategory" value="transactionList" class="custom-control-input" (change)="renderSubCategories()"/>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Transaction List</span>
+                                </label>
+                            </div>        
+                        </div>
+                        <ss-multiselect-dropdown [options]="subCategoryOptions" [(ngModel)]="selectedSubCategories" (ngModelChange)="onChange($event)"
+                            formControlName="subCategory"></ss-multiselect-dropdown>                        
+                        <div>
+                            <button type="submit" class="btn btn-warning">Download</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
