@@ -7,3 +7,4 @@ https://github.com/simonbengtsson/jsPDF-AutoTable -> autoTable plugin
 
 https://github.com/MrRio/jsPDF -> jsPDF
 
+This url https://stackoverflow.com/questions/333537/how-to-generate-excel-through-javascript tells how to create csv file which can be used inside excel.
